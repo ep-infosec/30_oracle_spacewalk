@@ -1,0 +1,14 @@
+# /etc/logrotate.d/rhn-proxy-redirect
+#
+
+/var/log/rhn/rhn_proxy_redirect.log {
+    weekly
+    rotate 5
+    copytruncate
+    compress
+    notifempty
+    size=10M
+    missingok
+#LOGROTATE-3.8#    su root apache
+}
+
